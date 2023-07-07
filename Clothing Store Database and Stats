@@ -1,0 +1,36 @@
+Create a clothing store database
+
+CREATE TABLE zixtree_label (id INTEGER PRIMARY KEY, name TEXT, style TEXT, size INTEGER, price INTEGER);
+INSERT INTO zixtree_label VALUES (1, "TIFE SET", "PANT SETS", 8, 23500);
+INSERT INTO zixtree_label VALUES (2, "AISHA KAFTAN", "DRESSES", 10, 27000);
+INSERT INTO zixtree_label VALUES (3, "DARA DRESS", "DRESSES", 12, 23500);
+INSERT INTO zixtree_label VALUES (4, "NELO JUMPSUIT", "JUMPSUITS", 8, 23500);
+INSERT INTO zixtree_label VALUES (5, "MIDE JUMPSUIT", "JUMPSUITS", 8, 23500);
+INSERT INTO zixtree_label VALUES (6, "IMANI SET", "PANT SETS", 8, 25000);
+INSERT INTO zixtree_label VALUES (7, "AYO DRESS", "DRESSES", 12, 30000);
+INSERT INTO zixtree_label VALUES (8, "KOSI DRESS", "DRESSES", 12, 25000);
+INSERT INTO zixtree_label VALUES (9, "KENY DRESS", "DRESSES", 8, 23500);
+INSERT INTO zixtree_label VALUES (10, "MALZ DRESS", "DRESSES", 12, 23500);
+INSERT INTO zixtree_label VALUES (11, "ZOE JUMPSUIT", "JUMPSUITS", 8, 23500);
+INSERT INTO zixtree_label VALUES (12, "ROSE PLAYSUIT", "JUMPSUITS", 12, 23500);
+INSERT INTO zixtree_label VALUES (13, "SELENA SET", "SKIRT SETS", 10, 25000);
+INSERT INTO zixtree_label VALUES (14, "TOPE SET", "SKIRT SETS", 12, 23500);
+INSERT INTO zixtree_label VALUES (15, "UCHE SET", "SKIRT SETS", 8, 21500);
+
+display the database
+SELECT * FROM zixtree_label;
+
+display the database ordered by price
+SELECT * FROM zixtree_label ORDER BY price;
+
+display the database ordered by style.
+SELECT * FROM zixtree_label ORDER BY style;
+
+how many of each size?
+SELECT size, COUNT(style) FROM zixtree_label GROUP BY size;
+
+how many of each style?
+SELECT style, COUNT(size) FROM zixtree_label GROUP BY style;
+
+display database for sizes less than 10
+SELECT * FROM zixtree_label WHERE size < 10 ORDER BY size;
